@@ -9,7 +9,6 @@ const app = express()
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 //settings
-//app.set("port", process.env.PORT || 3000);
 app.set('views', join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
@@ -19,7 +18,7 @@ app.use(indexRoutes)
 //static files
 app.use(express.static(join(__dirname, 'public')))
 
-
 //listening the server
 app.listen(process.env.PORT || 3000)
 console.log('server is listening on port',process.env.PORT || 3000)
+
